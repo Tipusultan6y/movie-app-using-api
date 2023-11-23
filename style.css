@@ -276,3 +276,110 @@ main{
 .dots .dot.active{
     border-color: orange;
 }
+
+
+/* Default Styles (for larger screens) */
+/* ... (Previous CSS rules) ... */
+
+/* Media Query for Tablets (e.g., iPad) */
+@media screen and (max-width: 1024px) {
+    /* Modify styles for tablets here */
+    body {
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .movie {
+        width: 48%; /* Reduce movie card width for better display on tablets */
+    }
+
+    /* ... Add other responsive styles ... */
+}
+
+/* Media Query for Mobile Devices (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+    /* Modify styles for mobile devices here */
+    body {
+        font-size: 14px; /* Further reduce font size for smaller screens */
+    }
+
+    .movie {
+        width: 100%; /* Full width for movie cards on small screens */
+    }
+
+    .search {
+        padding: 0.3rem 0.6rem; /* Adjust padding for search input */
+    }
+
+    /* ... Add other responsive styles ... */
+}
+
+/* Default Styles (for larger screens) */
+/* ... (Previous CSS rules) ... */
+
+/* Media Query for iPhones (Portrait Mode) */
+@media screen and (max-width: 375px) {
+    /* Modify styles for iPhones in portrait mode here */
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .movie {
+        width: 100%; /* Full width for movie cards on small screens */
+        margin: 0.5rem 0;
+    }
+
+    .search {
+        padding: 0.3rem 0.6rem; /* Adjust padding for search input */
+    }
+
+    /* ... Add other responsive styles ... */
+}
+
+/* Media Query for Samsung Devices (Portrait Mode) */
+@media screen and (max-width: 360px) {
+    /* Modify styles for Samsung devices in portrait mode here */
+    body {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+
+    .movie {
+        width: 100%; /* Full width for movie cards on small screens */
+        margin: 0.5rem 0;
+    }
+
+    .search {
+        padding: 0.3rem 0.6rem; /* Adjust padding for search input */
+    }
+
+    .search {
+        text-align: left; /* Align text to the left */
+        width: 80%; /* Reduce the width to make it more aligned to the left */
+        margin: 0 auto; /* Center it horizontally */
+    }
+
+}
+
+
+
+/* Media Query for iPhone SE (Portrait Mode) */
+@media screen and (max-width: 320px) {
+    /* Modify styles for iPhone SE in portrait mode here */
+    body {
+        font-size: 12px; /* Adjust font size for better readability on smaller screens */
+    }
+
+    .movie {
+        width: 100%; /* Full width for movie cards on small screens */
+        margin: 0.5rem 0;
+    }
+
+    /* Align the search box to the left for iPhone SE */
+    .search {
+        padding: 0.2rem 0.4rem; 
+        font-size: 12px; 
+        text-align: left; 
+        width: 60%; 
+        margin: 0 auto; 
+    }
+}
+
