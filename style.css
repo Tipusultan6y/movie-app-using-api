@@ -277,10 +277,6 @@ main{
     border-color: orange;
 }
 
-
-/* Default Styles (for larger screens) */
-/* ... (Previous CSS rules) ... */
-
 /* Media Query for Tablets (e.g., iPad) */
 @media screen and (max-width: 1024px) {
     /* Modify styles for tablets here */
@@ -291,30 +287,145 @@ main{
     .movie {
         width: 48%; /* Reduce movie card width for better display on tablets */
     }
+    
 
     /* ... Add other responsive styles ... */
 }
 
 /* Media Query for Mobile Devices (e.g., smartphones) */
 @media screen and (max-width: 768px) {
-    /* Modify styles for mobile devices here */
+    
     body {
-        font-size: 14px; /* Further reduce font size for smaller screens */
+        font-size: 14px;
+    }
+
+    /* .movie {
+        width: 100%;
+    } */
+
+    .search {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .overlay {
+        width: 100%; /* Full width for overlay on small screens */
+    }
+
+    .overlay-content {
+        margin-top: 10%; /* Adjust margin for smaller screens */
+    }
+
+    .overlay a {
+        font-size: 24px; /* Reduce font size of links on smaller screens */
+    }
+
+    .closebtn {
+        font-size: 40px; /* Adjust close button size for better visibility */
+        top: 10px;
+        right: 20px;
+    }
+
+    .arrow {
+        font-size: 24px; /* Reduce arrow size on smaller screens */
+    }
+
+        /* Styles for the left arrow (Previous) */
+        .left-arrow {
+            top: 10%; /* Adjust positioning for the left arrow */
+            left: 3%; /* Adjust positioning for the left arrow */
+            transform: translateY(-50%);
+        }
+    
+        /* Styles for the right arrow (Next) */
+        .right-arrow {
+            top: 10%; /* Adjust positioning for the right arrow */
+            right: 3%; /* Adjust positioning for the right arrow */
+            transform: translateY(-50%);
+        }
+
+    .overview {
+        padding: 0.5rem; /* Adjust padding for movie overview */
+    }
+
+    .know-more {
+        font-size: 14px; /* Reduce font size of 'Know More' button */
+        padding: 8px 16px; /* Adjust padding of 'Know More' button */
+        margin-top: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .dots {
+        margin-top: 15px; /* Adjust margin for the dots section */
+    }
+
+    .dots .dot {
+        padding: 4px 8px; /* Adjust padding for the dots */
+        font-size: 14px; /* Adjust font size for the dots */
+        margin: 3px;
+    }
+
+    
+    /* Styles for the numbered buttons (1, 2, 3, etc.) */
+    .numbered-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .numbered-buttons button {
+        font-size: 12px; /* Adjust font size for numbered buttons */
+        padding: 6px 10px; /* Adjust padding for numbered buttons */
+        border-radius: 5px;
+        background-color: orange;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin: 3px;
+        transition: background-color 0.3s ease;
+    }
+
+    .numbered-buttons button:hover {
+        background-color: darkorange;
+    }
+
+    .video-container {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 aspect ratio (height: 9/16 * 100) */
+        width: 100%;
+    }
+
+    .video-container object, 
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Make the video width 100% to fit its container */
+        height: 200px !important; /* Set a specific height for the video on smaller screens */
     }
 
     .movie {
-        width: 100%; /* Full width for movie cards on small screens */
+        width: calc(50% - 20px); /* Make movie cards occupy full width */
+        margin: 0.5rem 10px; /* Adjust margin for better spacing between cards */
     }
 
-    .search {
-        padding: 0.3rem 0.6rem; /* Adjust padding for search input */
+    
+    .arrow.left-arrow {
+        left: 5px; /* Adjust positioning of the left arrow */
     }
 
-    /* ... Add other responsive styles ... */
+    .arrow.right-arrow {
+        right: 5px; /* Adjust positioning of the right arrow */
+    }
 }
 
-/* Default Styles (for larger screens) */
-/* ... (Previous CSS rules) ... */
 
 /* Media Query for iPhones (Portrait Mode) */
 @media screen and (max-width: 375px) {
@@ -332,6 +443,18 @@ main{
         padding: 0.3rem 0.6rem; /* Adjust padding for search input */
     }
 
+    .arrow.left-arrow {
+        left: 5px; /* Adjust positioning of the left arrow */
+    }
+
+    .arrow.right-arrow {
+        right: 5px; /* Adjust positioning of the right arrow */
+    }
+
+    
+
+ 
+
     /* ... Add other responsive styles ... */
 }
 
@@ -343,9 +466,10 @@ main{
     }
 
     .movie {
-        width: 100%; /* Full width for movie cards on small screens */
+        width: 100%;
         margin: 0.5rem 0;
     }
+
 
     .search {
         padding: 0.3rem 0.6rem; /* Adjust padding for search input */
@@ -355,6 +479,27 @@ main{
         text-align: left; /* Align text to the left */
         width: 80%; /* Reduce the width to make it more aligned to the left */
         margin: 0 auto; /* Center it horizontally */
+    }
+/* jj */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (height: 9/16 * 100) */
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container object, 
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Make the video width 100% to fit its container */
+        height: 200px !important; /* Set a specific height for the video on smaller screens */
     }
 
 }
@@ -382,4 +527,23 @@ main{
         margin: 0 auto; 
     }
 }
+
+/* Media Query for Samsung F23 (1080x2408 pixels) */
+@media screen and (max-width: 1080px) and (max-height: 2408px) {
+    /* Adjust styles for screens up to 1080x2408 pixels */
+    /* Example: */
+    body {
+        font-size: 14px;
+    }
+
+    .movie {
+        width: 48%;
+    }
+
+    /* Additional styles specific to screens up to 1080x2408 pixels */
+}
+
+/* Additional media queries for other resolutions if needed */
+
+
 
