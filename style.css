@@ -540,10 +540,12 @@ main{
         width: 48%;
     }
 
-    /* Additional styles specific to screens up to 1080x2408 pixels */
+    .search {
+        padding: 0.3rem 0.6rem;
+        font-size: 14px;
+        width: 80%;
+    }
+
 }
-
-/* Additional media queries for other resolutions if needed */
-
 
 
